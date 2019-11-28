@@ -36,7 +36,7 @@ const Visitor = db.define('Visitor', {
   })
 Visitor.belongsTo(Host);
 Host.hasMany(Visitor);
-db.sync({force:true},()=>
+db.sync(()=>
 {
     console.log('working fine')
 })

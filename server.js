@@ -13,11 +13,10 @@ const accountSid = 'AC74e82410895a9bce6d1692560856ea88';
 const authToken = 'API_key';
 const client = require('twilio')(accountSid, authToken);
 var transporter = nodemailer.createTransport({
-    
   service: 'gmail',
   auth: {
-    user: 'uwaishkhan55@gmail.com',
-    pass: 'user_password'
+    user: 'mohdravil001@gmail.com',
+    pass: 'mohdravil123@'
   }
 });
 app.post('/database',async(req,res)=>{
@@ -98,7 +97,7 @@ var mailOptions = {
     from: 'uwaishkhan55@gmail.com',
     to: item.Email,
     subject: 'Visit Status',
-    text: `Name - ${item.Host.Name}\nEmail - ${item.Host.Email}\nPhone - ${item.Host.Number}\nCheckin Time - ${item.CheckIn}\nCheckout Time - ${ date.toLocaleString()}`
+    text: `Name - ${item.Name}\nPhone - ${item.Number}\nCheckin Time - ${item.CheckIn}\nCheckout Time - ${ date.toLocaleString()}\nName - ${item.Host.Name}\nAddress - ${item.Host.Address}`
   };
   
   transporter.sendMail(mailOptions, function(error, info){
