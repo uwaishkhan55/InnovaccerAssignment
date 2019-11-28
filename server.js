@@ -112,6 +112,7 @@ var mailOptions = {
     res.sendStatus(200)
 
 })
-app.listen(3000,()=>{
+let Port =process.env.Port||3000;
+app.listen(Port,()=>{
     console.log("localhost:3000")
 })
