@@ -31,6 +31,9 @@ const Visitor = db.define('Visitor', {
     },
     CheckIn:{
       type: Sequelize.STRING(30)
+    },
+    CheckOut:{
+      type:Sequelize.STRING(30)
     }
     
   })

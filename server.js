@@ -49,6 +49,7 @@ console.log(name);
 console.log(email);
 console.log(hnumber)
 
+//Sending message to the Host With the Visitor details.
 
 client.messages
   .create({
@@ -92,12 +93,21 @@ app.get('/end',async(req,res)=>{
      
  
    date=new Date()
+   var d=date.toLocaleString()
+   Visitor.update(
+    {CheckOut:d},
+    {
+        where:{
+            id:id
+        }
+    }
+)
 //Sending Email to Visitor
 var mailOptions = {
     from: 'uwaishkhan55@gmail.com',
     to: item.Email,
     subject: 'Visit Status',
-    text: `Name - ${item.Name}\nPhone - ${item.Number}\nCheckin Time - ${item.CheckIn}\nCheckout Time - ${ date.toLocaleString()}\nName - ${item.Host.Name}\nAddress - ${item.Host.Address}`
+    text: `Name - ${item.Name}\nPhone - ${item.Number}\nCheckin Time - ${item.CheckIn}\nCheckout Time - ${ d}\nName - ${item.Host.Name}\nAddress - ${item.Host.Address}`
   };
   
   transporter.sendMail(mailOptions, function(error, info){
