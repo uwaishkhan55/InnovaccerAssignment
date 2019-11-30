@@ -1,14 +1,14 @@
 # InnovaccerAssignment
 Entry Management webapp is using nodmailer and twilio API to send the useful information to Visitor as well as Host.
-![Screenshot (26)](https://user-images.githubusercontent.com/49112789/69904191-d28c8480-13c9-11ea-91c2-04458cbf0bb8.png)
 # Demo
 Here is a working live demo : https://innovaccerassignment.herokuapp.com/
 # Landing Page
 ![Screenshot (26)](https://user-images.githubusercontent.com/49112789/69904191-d28c8480-13c9-11ea-91c2-04458cbf0bb8.png)
 # Form 
+Visitor has to fill this form for the meeting.
 ![Screenshot (25)](https://user-images.githubusercontent.com/49112789/69904231-28612c80-13ca-11ea-92de-1081a316fba1.png)
 # Waiting Area
-## In the section visitor and host will meet.
+ In the section visitor and host will meet.
 ![Screenshot (30)](https://user-images.githubusercontent.com/49112789/69904194-d7e9cf00-13c9-11ea-8f1d-99d6bdda6184.png)
 # Details of meeting.
 ## following sms will be sent to the Host.
